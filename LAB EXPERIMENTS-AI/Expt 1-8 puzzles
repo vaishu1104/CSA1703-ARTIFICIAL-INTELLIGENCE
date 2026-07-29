@@ -1,0 +1,28 @@
+def display(state):
+    for row in state:
+        print(row)
+    print()
+
+start = [[1, 2, 3],
+         [4, 0, 6],
+         [7, 5, 8]]
+
+goal = [[1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 0]]
+
+print("Initial State:")
+display(start)
+
+print("Goal State:")
+display(goal)
+
+print("Move 1:")
+start[1][1], start[2][1] = start[2][1], start[1][1]
+display(start)
+
+print("Move 2:")
+start[2][1], start[2][2] = start[2][2], start[2][1]
+display(start)
+
+print("Puzzle Solved!")
