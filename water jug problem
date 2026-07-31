@@ -1,0 +1,27 @@
+jug1 = 0
+jug2 = 0
+
+print("Initial State:", (jug1, jug2))
+
+jug2 = 3
+print("Fill Jug2:", (jug1, jug2))
+
+jug1 = 3
+jug2 = 0
+print("Pour Jug2 -> Jug1:", (jug1, jug2))
+
+jug2 = 3
+print("Fill Jug2:", (jug1, jug2))
+
+jug1 = 4
+jug2 = 2
+print("Pour Jug2 -> Jug1:", (jug1, jug2))
+
+jug1 = 0
+print("Empty Jug1:", (jug1, jug2))
+
+jug1 = 2
+jug2 = 0
+print("Pour Jug2 -> Jug1:", (jug1, jug2))
+
+print("Goal Achieved: 2 Litres in Jug1")
