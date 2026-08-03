@@ -1,0 +1,33 @@
+room_A = input("Enter the status of Room A (Clean/Dirty): ").capitalize()
+room_B = input("Enter the status of Room B (Clean/Dirty): ").capitalize()
+
+location = input("Enter the initial location (A/B): ").upper()
+
+if location == "A":
+    if room_A == "Dirty":
+        print("Cleaning Room A")
+        room_A = "Clean"
+
+    print("Moving to Room B")
+
+    if room_B == "Dirty":
+        print("Cleaning Room B")
+        room_B = "Clean"
+
+elif location == "B":
+    if room_B == "Dirty":
+        print("Cleaning Room B")
+        room_B = "Clean"
+
+    print("Moving to Room A")
+
+    if room_A == "Dirty":
+        print("Cleaning Room A")
+        room_A = "Clean"
+
+else:
+    print("Invalid Location")
+
+print("\nFinal Status")
+print("Room A:", room_A)
+print("Room B:", room_B)
