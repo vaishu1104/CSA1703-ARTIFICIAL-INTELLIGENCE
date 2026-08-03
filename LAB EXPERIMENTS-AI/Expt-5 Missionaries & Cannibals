@@ -1,0 +1,20 @@
+states = [
+    (3, 3, 'Left'),
+    (3, 1, 'Right'),
+    (3, 2, 'Left'),
+    (3, 0, 'Right'),
+    (3, 1, 'Left'),
+    (1, 1, 'Right'),
+    (2, 2, 'Left'),
+    (0, 2, 'Right'),
+    (0, 3, 'Left'),
+    (0, 1, 'Right'),
+    (1, 1, 'Left'),
+    (0, 0, 'Right')
+]
+
+print("Missionaries  Cannibals  Boat")
+for s in states:
+    print(s[0], "\t\t", s[1], "\t\t", s[2])
+
+print("\nGoal Reached")
