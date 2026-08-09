@@ -1,0 +1,9 @@
+from sklearn.tree import DecisionTreeClassifier
+
+X = [[2, 60], [3, 65], [5, 75], [6, 80],
+     [8, 90], [9, 95]]
+y = [0, 0, 1, 1, 1, 1]
+model = DecisionTreeClassifier()
+model.fit(X, y)
+result = model.predict([[7, 85]])
+print("Prediction:", "Pass" if result[0] == 1 else "Fail")
