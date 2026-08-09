@@ -1,0 +1,44 @@
+regions = ['A', 'B', 'C', 'D']
+
+neighbors = {
+    'A': ['B', 'C'],
+    'B': ['A', 'C', 'D'],
+    'C': ['A', 'B', 'D'],
+    'D': ['B', 'C']
+}
+
+colors = ['Red', 'Green', 'Blue']
+coloring = {}
+
+
+def is_safe(region, color):
+    for neighbor in neighbors[region]:
+        if neighbor in coloring and coloring[neighbor] == color:
+            return False
+    return True
+
+
+def map_coloring(index):
+    if index == len(regions):
+        return True
+
+    region = regions[index]
+
+    for color in colors:
+        if is_safe(region, color):
+            coloring[region] = color
+
+            if map_coloring(index + 1):
+                return True
+
+            del coloring[region]
+
+    return False
+
+
+if map_coloring(0):
+    print("Map Coloring Solution:")
+    for region in regions:
+        print(region, ":", coloring[region])
+else:
+    print("No solution exists.")
