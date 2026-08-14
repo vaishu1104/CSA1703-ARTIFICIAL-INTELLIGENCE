@@ -1,0 +1,15 @@
+
+
+adb = {
+    "Vaishnavi": "08-04-2007",
+    "Rahul": "20-03-2004",
+    "Priya": "10-12-2005"
+}
+
+name = (input("enter name:"))
+
+if name in adb:
+    print("Name:", name)
+    print("DOB:", adb[name])
+else:
+    print("Name not found")
