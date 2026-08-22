@@ -1,0 +1,16 @@
+% Disease and food database
+
+diet(diabetes, 'vegetables and whole grains').
+diet(diabetes, 'fruits in moderate amounts').
+
+diet(obesity, 'vegetables and fruits').
+diet(obesity, 'whole grains and lean protein').
+
+diet(anemia, 'iron-rich foods').
+diet(anemia, 'green leafy vegetables').
+
+diet(heart_disease, 'fruits and vegetables').
+diet(heart_disease, 'whole grains and low-fat foods').
+
+suggest(Disease, Food) :-
+    diet(Disease, Food).
