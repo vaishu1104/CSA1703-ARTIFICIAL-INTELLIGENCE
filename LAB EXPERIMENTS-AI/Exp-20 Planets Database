@@ -1,0 +1,11 @@
+planet(mercury, 1, rocky).
+planet(venus, 2, rocky).
+planet(earth, 3, rocky).
+planet(mars, 4, rocky).
+planet(jupiter, 5, gas).
+planet(saturn, 6, gas).
+planet(uranus, 7, ice).
+planet(neptune, 8, ice).
+
+find_planet(Name, Position, Type) :-
+    planet(Name, Position, Type).
