@@ -1,0 +1,6 @@
+person(vaishnavi, '15-08-2005').
+person(rahul, '20-03-2004').
+person(priya, '10-12-2005').
+
+dob(Name, DOB) :-
+    person(Name, DOB).
