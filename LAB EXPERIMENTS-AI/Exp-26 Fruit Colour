@@ -1,0 +1,8 @@
+fruit_colour(apple, red).
+fruit_colour(banana, yellow).
+fruit_colour(orange, orange).
+fruit_colour(grapes, green).
+fruit_colour(mango, yellow).
+
+fruit(Fruit, Colour) :-
+    fruit_colour(Fruit, Colour).
