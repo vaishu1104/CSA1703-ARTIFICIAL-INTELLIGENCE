@@ -1,0 +1,17 @@
+bird(parrot).
+bird(eagle).
+bird(penguin).
+bird(ostrich).
+
+can_fly(parrot).
+can_fly(eagle).
+
+cannot_fly(penguin).
+cannot_fly(ostrich).
+
+fly(Bird) :-
+    can_fly(Bird).
+
+fly(Bird) :-
+    cannot_fly(Bird),
+    fail.
