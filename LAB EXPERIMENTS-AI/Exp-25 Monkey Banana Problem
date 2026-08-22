@@ -1,0 +1,16 @@
+% Monkey Banana Problem
+
+move(monkey, Position, box, Position).
+push(box, Position, banana, Position).
+climb(monkey, box).
+grab(monkey, banana).
+
+solve :-
+    move(monkey, door, box, door),
+    write('Monkey moves to the box.'), nl,
+    push(box, door, banana, door),
+    write('Monkey pushes the box to the banana.'), nl,
+    climb(monkey, box),
+    write('Monkey climbs on the box.'), nl,
+    grab(monkey, banana),
+    write('Monkey gets the banana.'), nl.
