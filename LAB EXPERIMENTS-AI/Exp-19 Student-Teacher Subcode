@@ -1,0 +1,13 @@
+student(vaishnavi).
+student(rahul).
+student(priya).
+
+teacher(ravi).
+teacher(anu).
+
+teaches(ravi, vaishnavi).
+teaches(ravi, rahul).
+teaches(anu, priya).
+
+find_teacher(Student, Teacher) :-
+    teaches(Teacher, Student).
