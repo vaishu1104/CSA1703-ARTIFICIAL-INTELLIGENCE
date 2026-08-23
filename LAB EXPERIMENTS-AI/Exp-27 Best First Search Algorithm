@@ -1,0 +1,38 @@
+edge(a, b).
+edge(a, c).
+edge(b, d).
+edge(b, e).
+edge(c, f).
+edge(d, g).
+edge(e, g).
+edge(f, g).
+
+h(a, 7).
+h(b, 6).
+h(c, 4).
+h(d, 2).
+h(e, 1).
+h(f, 2).
+h(g, 0).
+
+best_first(Start, Goal, Path) :-
+    search([[Start]], Goal, RevPath),
+    reverse(RevPath, Path).
+
+search([[Goal|Path]|_], Goal, [Goal|Path]).
+
+search([[Node|Path]|Rest], Goal, Result) :-
+    findall([Next,Node|Path],
+            (edge(Node, Next), \+ member(Next, [Node|Path])),
+            NewPaths),
+    append(Rest, NewPaths, Paths),
+    sort_paths(Paths, SortedPaths),
+    search(SortedPaths, Goal, Result).
+
+sort_paths(Paths, Sorted) :-
+    map_list_to_pairs(path_value, Paths, Pairs),
+    keysort(Pairs, SortedPairs),
+    pairs_values(SortedPairs, Sorted).
+
+path_value([Node|_], H) :-
+    h(Node, H).
