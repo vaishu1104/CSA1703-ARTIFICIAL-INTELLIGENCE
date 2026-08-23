@@ -1,0 +1,14 @@
+symptom(fever).
+symptom(cough).
+symptom(sore_throat).
+symptom(runny_nose).
+
+diagnosis(flu) :-
+    symptom(fever),
+    symptom(cough),
+    symptom(sore_throat).
+
+diagnosis(common_cold) :-
+    symptom(cough),
+    symptom(runny_nose),
+    symptom(sore_throat).
