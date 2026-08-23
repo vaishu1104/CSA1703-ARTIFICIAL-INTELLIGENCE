@@ -1,0 +1,10 @@
+bird(parrot).
+bird(eagle).
+bird(penguin).
+
+has_wings(parrot).
+has_wings(eagle).
+
+can_fly(Bird) :-
+    bird(Bird),
+    has_wings(Bird).
