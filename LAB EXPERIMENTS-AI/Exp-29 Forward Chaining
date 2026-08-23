@@ -1,0 +1,17 @@
+% Facts
+fact(sunny).
+fact(warm).
+
+% Rules
+rule(sunny, outdoor).
+rule(warm, comfortable).
+rule(outdoor, happy).
+rule(comfortable, happy).
+
+% Forward chaining
+derive(X) :-
+    fact(X).
+
+derive(X) :-
+    rule(Y, X),
+    derive(Y).
